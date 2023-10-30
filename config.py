@@ -14,3 +14,7 @@ title = "pietroppeter"
 
 # Site tagline.
 tagline = "recursing"
+
+lib_dir = "themes"
+out_dir = "docs"
+res_dir = "resources"

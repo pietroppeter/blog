@@ -1,13 +1,24 @@
+# 2023-10-30
+
+## leftover for next post
+
+- [ ] use a blog theme (posts)
+- [ ] deploy with CI
+- [ ] style code snippets
+
 ## ihwd theme + post recursing0
 
 - content0: content written in Toceno (minus schedule)
 - ihwd0: center text and limit width
 - content1: fix text and links. fix wording of rules
+- colors, spacing and that's about it
+- [ ] ah the date!
+- [ ] et-font?
 
 ## on ark
 
-- issue: site.py clashes with PyLance :/
-- lib is ignored but maybe it shouldn't? unignored partially
+- issue: site.py clashes with PyLance :/ (can change to config.py!)
+- lib is ignored but maybe it shouldn't? unignored partially (and changed to themes)
 - should I remove the menu in inc? done
 - should I rename out to docs?
 
