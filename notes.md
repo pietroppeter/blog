@@ -1,8 +1,15 @@
+## ihwd theme + post recursing0
+
+- content0: content written in Toceno (minus schedule)
+- ihwd0: center text and limit width
+- content1: fix text and links. fix wording of rules
+
 ## on ark
 
 - issue: site.py clashes with PyLance :/
-- lib is ignored but maybe it shouldn't?
-- should I remove the menu in inc?
+- lib is ignored but maybe it shouldn't? unignored partially
+- should I remove the menu in inc? done
+- should I rename out to docs?
 
 ## setup
 
