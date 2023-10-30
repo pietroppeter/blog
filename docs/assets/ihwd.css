@@ -1,0 +1,42 @@
+/* ihwd theme
+
+ihwd stands for I Heart Web Design
+Inspired by Jeremy Thomas "Web design in 4 minutes"
+*/
+
+/* center text and limit width */
+body {
+  margin: 0 auto;
+  max-width: 50em;
+}
+
+/* font family: improve appeal and readability of text */
+body {
+  font-family: Georgia, Times, serif;
+}
+
+/* spacing: within and around */
+body {
+  line-height: 1.5em;
+  padding: 2em 1em;
+}
+/* in the original top margin and padding of 2em
+is added to h2. not doing it here */
+
+/* color and contrast */
+body {
+  color: #555; 
+}
+
+h2, em, strong {
+  color: #333;
+}
+
+
+
+/* Primary color - from Elm */
+a {
+  color: rgb(12, 145, 216);
+}
+
+/* not doing colors for code snippets or secondary colors */

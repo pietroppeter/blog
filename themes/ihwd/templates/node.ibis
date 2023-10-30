@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ node.meta_title || node.title || site.title }}</title>
+        <link rel="stylesheet" href="@root/assets/ihwd.css">
+        <link rel="stylesheet" href="@root/assets/et-book.css">
+        {% if node.meta_description %}
+            <meta name="description" content="{$ node.meta_description.strip() $}">
+        {% endif %}
+        {{ inc.head }}
+    </head>
+    <body class="{$ classes|join(' ') $}">
+        {{ node.html }}
+    </body>
+</html>
