@@ -1,4 +1,5 @@
 ## Recursing: step 0
+### 2023-10-30
 
 Yesterday was my last day as “Happily Unemployed” (_felicemente disoccupato_).
 

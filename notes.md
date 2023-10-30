@@ -12,8 +12,9 @@
 - ihwd0: center text and limit width
 - content1: fix text and links. fix wording of rules
 - colors, spacing and that's about it
-- [ ] ah the date!
-- [ ] et-font?
+- [x] ah the date!
+  - I was not able to do it with the theme
+- [ ] et-font? no later
 
 ## on ark
 
