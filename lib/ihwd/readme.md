@@ -1,0 +1,3 @@
+- basic web design from the 90s
+- ihwd stands for i-heart-web-design
+- inspired by https://jgthms.com/web-design-in-4-minutes/

@@ -15,7 +15,14 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+
+#lib/ # <- ark uses this
+# ignore ark default themes:
+lib/debug/
+lib/graphite/
+# ark build folder
+out/
+
 lib64/
 parts/
 sdist/

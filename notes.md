@@ -1,3 +1,9 @@
+## on ark
+
+- issue: site.py clashes with PyLance :/
+- lib is ignored but maybe it shouldn't?
+- should I remove the menu in inc?
+
 ## setup
 
 - creating a virtual environment with venv:
