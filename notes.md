@@ -1,12 +1,18 @@
-# 2023-10-30
+## 2024-09-07
 
-## leftover for next post
+- setup with uv [x]
+
+
+
+## 2023-10-30
+
+### leftover for next post
 
 - [ ] use a blog theme (posts)
 - [ ] deploy with CI
 - [ ] style code snippets
 
-## ihwd theme + post recursing0
+### ihwd theme + post recursing0
 
 - content0: content written in Toceno (minus schedule)
 - ihwd0: center text and limit width
@@ -16,14 +22,14 @@
   - I was not able to do it with the theme
 - [ ] et-font? no later
 
-## on ark
+### on ark
 
 - issue: site.py clashes with PyLance :/ (can change to config.py!)
 - lib is ignored but maybe it shouldn't? unignored partially (and changed to themes)
 - should I remove the menu in inc? done
 - should I rename out to docs?
 
-## setup
+### setup
 
 - creating a virtual environment with venv:
   - `python3 -m venv env`
