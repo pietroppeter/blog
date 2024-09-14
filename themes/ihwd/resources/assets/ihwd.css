@@ -38,3 +38,21 @@ a {
 }
 
 /* not doing colors for code snippets or secondary colors */
+
+/* minimal navbar */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav li:not(:last-child)::after {
+  content: "•";
+  margin-left: 10px;
+}

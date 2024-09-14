@@ -1,8 +1,25 @@
+## 2024-09-14
+
+during [![Open Source Saturday](https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F-open%20source%20saturday-F64060.svg)](https://www.meetup.com/it-IT/Open-Source-Saturday-Milano/)
+
+- clean up blog.egg-info folder (who added it?) [x]
+- exclude et_font css in head [x]
+  - how do I exclude the asset? how do I exclude a directory in src? or a path, conditionally?
+- learning ark
+  - use a head template? yes, since I will need to include in two types of template (home and post)
+- plan what to change in order to list posts!
+  - check how the blog theme does it
+    - here is a blog theme: https://github.com/dmulholl/twentyfifteen
+    - which is based on this blog plugin: https://github.com/dmulholl/holly
+    - mmh, I do not want to use a plugin (and I do not think I need it, do I?)
+    - mmh, maybe I need it! it seems I cannot 
+- minimal nav between posts (aka home) and about page [x]
+  - how to style it? I need a class but I cannot have a class from md
+  - change nav.md to nav.html and styled with minimal styling [x]
+
 ## 2024-09-07
 
 - setup with uv [x]
-
-
 
 ## 2023-10-30
 
@@ -22,66 +39,12 @@
   - I was not able to do it with the theme
 - [ ] et-font? no later
 
-### on ark
+# learning ark
 
 - issue: site.py clashes with PyLance :/ (can change to config.py!)
 - lib is ignored but maybe it shouldn't? unignored partially (and changed to themes)
 - should I remove the menu in inc? done
-- should I rename out to docs?
+- should I rename out to docs? done
 
 ### setup
 
-- creating a virtual environment with venv:
-  - `python3 -m venv env`
-  - (note that python3 and python on my system are both python but different versions)
-- ignore from https://github.com/github/gitignore/blob/main/Python.gitignore
-- activate with source env/bin/activate
-- install ark with `python -m pip install ark`
-- (deactivate with deactivate)
-
-
-```
-base   12:01:10  
-❯ python3 --version           
-Python 3.11.1
-
-    ~/blog    main ───────── base   12:01:58  
-❯ python3 -m venv env
-
-    ~/blog    main ?1 ─
-    ~/blog    main ?1 
-❯ which python
-/usr/local/bin/python
-
-    ~/blog    main ?2 
-❯ which python3
-/Library/Frameworks/Python.framework/Versions/3.11/bin/python3
-
-    ~/blog    main ?2 
-❯ which python   
-/usr/local/bin/python
-
-    ~/blog    main ?2 
-❯ python --version   
-Python 3.9.18
-
-    ~/blog    main ?2 
-❯ which python3  
-/Library/Frameworks/Python.framework/Versions/3.11/bin/python3
-
-    ~/blog    main ?2 
-❯ python3 --version  
-Python 3.11.1
-
-    ~/blog    main ?2 
-❯ source env/bin/activate
-
-    ~/blog    main ?2 
-❯ which python 
-/Users/pietroppeter/blog/env/bin/python
-
-    ~/blog    main ?2 
-❯ python --version 
-Python 3.11.1
-
-```

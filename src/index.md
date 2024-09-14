@@ -3,4 +3,4 @@ title: All posts
 subtitle: todo
 ---
 
-todo: list all posts
+- [recursing0](@root/posts/recursing0.html)

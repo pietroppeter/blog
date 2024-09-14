@@ -32,11 +32,27 @@ h2, em, strong {
   color: #333;
 }
 
-
-
 /* Primary color - from Elm */
 a {
   color: rgb(12, 145, 216);
 }
 
 /* not doing colors for code snippets or secondary colors */
+
+/* minimal navbar */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav li:not(:last-child)::after {
+  content: "•";
+  margin-left: 10px;
+}
