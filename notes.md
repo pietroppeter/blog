@@ -12,10 +12,16 @@ during [![Open Source Saturday](https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F-
     - here is a blog theme: https://github.com/dmulholl/twentyfifteen
     - which is based on this blog plugin: https://github.com/dmulholl/holly
     - mmh, I do not want to use a plugin (and I do not think I need it, do I?)
-    - mmh, maybe I need it! it seems I cannot 
+    - mmh, maybe I need it! it seems I cannot
+    - I can with a hack (double loop on children) [x]
 - minimal nav between posts (aka home) and about page [x]
   - how to style it? I need a class but I cannot have a class from md
   - change nav.md to nav.html and styled with minimal styling [x]
+- list posts [x]
+- add date [x]
+- use title and date in blogpost and node template [x]
+
+ordering of posts is very hacky! it is based on alphabetical list in folder posts
 
 ## 2024-09-07
 

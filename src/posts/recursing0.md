@@ -1,5 +1,8 @@
-## Recursing: step 0
-### 2023-10-30
+---
+title: "Recursing: step 0"
+date: 2023-10-30
+is_post: true
+---
 
 Yesterday was my last day as “Happily Unemployed” (_felicemente disoccupato_).
 

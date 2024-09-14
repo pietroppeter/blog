@@ -1,6 +1,4 @@
 ---
-title: All posts
-subtitle: todo
+title: pietroppeter's blog
+list_posts: true
 ---
-
-- [recursing0](@root/posts/recursing0.html)

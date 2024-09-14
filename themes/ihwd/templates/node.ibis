@@ -10,7 +10,30 @@
         {{ inc.head }}
     </head>
     <body class="{$ classes|join(' ') $}">
-        {{ inc.nav }}
+        <nav>
+            <ul>
+                <li><a href="@root/index.html">posts</a></li>
+                <li><a href="@root/about.html">about</a></li>
+            </ul>
+        </nav>
+        <hr>
+        {% if node.meta.title %}<h2>{{ node.meta.title }}</h2>{% endif%}
+        {% if node.meta.date %}<h3>{{ node.meta.date }}</h3>{% endif%}
         {{ node.html }}
+        {% if node.meta.list_posts %}
+            <ul class="posts">
+            {% for child in node.children %}
+                {% for child2 in child.children %}
+                    {{ child2 }}
+                    {% if child2.meta.is_post%}
+                    <li>
+                        <a href="{{ child2.url }}">{{ child2.meta.title }}</a>
+                        | {% if child2.meta.date %}{{ child2.meta.date }}{% endif%}
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </ul>
+        {% endif %}
     </body>
 </html>

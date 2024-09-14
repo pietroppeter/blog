@@ -7,10 +7,10 @@
 
 # Choose the theme to use when building your site. This variable should specify
 # the name of a theme directory in your site's 'lib' folder.
-theme = "ihwd"
+theme = "ihwd" # I ❤️ web design
 
 # Site title.
-title = "pietroppeter"
+title = "pietroppeter's personal blog"
 
 # Site tagline.
 tagline = "recursing"
