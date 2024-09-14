@@ -1,6 +1,6 @@
 ---
 title: "A second post"
-date: 2023-09-14
+date: 2024-09-14
 is_post: true
 ---
 Today at [Open Source Saturday #54](https://www.meetup.com/open-source-saturday-milano/events/302710633/?eventOrigin=home_page_upcoming_events$inPerson)
