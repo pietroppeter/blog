@@ -60,3 +60,21 @@ nav li:not(:last-child)::after {
 img {
   width: 100%;
 }
+
+/* table of contents (index) of a post */
+nav.toc {
+  border-left: 3px solid #ddd;
+  padding-left: 1em;
+  margin: 1.5em 0;
+}
+
+nav.toc p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+nav.toc ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
