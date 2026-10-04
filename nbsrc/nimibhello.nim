@@ -4,6 +4,7 @@ import nimib, blognb
 nbInit(theme = useBlog)
 nb.title = "Hello nimib"
 nb.date = "2026-10-04"
+nb.draft = true
 
 nbText: """
 This post is not written in markdown: it is a Nim file that uses

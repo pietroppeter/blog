@@ -1,6 +1,7 @@
 # blog
 
-A personal blog
+A personal blog: https://pietroppeter.github.io/blog/
+(drafts: https://pietroppeter.github.io/blog/drafts.html)
 
 built with [ark]
 
@@ -11,6 +12,13 @@ built with [ark]
 ```
 uv run ark build
 ```
+
+## drafts
+
+A post with `draft: true` in its front matter (`nb.draft = true` for nimib posts)
+is built but not listed in the index: it is listed in [drafts.html] instead.
+
+[drafts.html]: https://pietroppeter.github.io/blog/drafts.html
 
 ## posts with nimib
 

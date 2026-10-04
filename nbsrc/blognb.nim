@@ -7,12 +7,13 @@
 ## nbInit(theme = useBlog)
 ## nb.title = "My post"
 ## nb.date = "2026-10-04"
+## nb.draft = true # optional: listed in drafts/ instead of the index
 ## nbText: "hello"
 ## nbSave
 ## ```
 ##
 ## Running it (`nim r nbsrc/mypost.nim` or `nimble posts`) writes
-## `src/posts/mypost.html`: a yaml front matter (title, date, is_post)
+## `src/posts/mypost.html`: a yaml front matter (title, date, is_post, draft)
 ## followed by the html body of the document (no <html>, <head>, ...).
 ## ark then picks it up as any other post and wraps it in the blog theme.
 import std / [os, json]
@@ -28,13 +29,17 @@ proc `date=`*(nb: var Nb, date: string) =
   ## date of the post, in YYYY-MM-DD format (as in markdown posts)
   nb.doc.context["date"] = %date
 
+proc `draft=`*(nb: var Nb, draft: bool) =
+  ## a draft post is not listed in the index, only in drafts/
+  nb.doc.context["draft"] = %draft
+
 func frontMatter(nb: Nb): string =
   # json strings are valid yaml strings
   withNewlines:
     "---"
     "title: " & $(%nb.doc.context{"title"}.getStr)
     "date: " & nb.doc.context{"date"}.getStr
-    "is_post: true"
+    "is_post: true" & (if nb.doc.context{"draft"}.getBool: "\ndraft: true" else: "")
     "---"
 
 func nbDocToBlogHtml*(blk: NbBlock, nb: Nb): string =
