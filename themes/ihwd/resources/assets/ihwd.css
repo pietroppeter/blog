@@ -61,20 +61,19 @@ img {
   width: 100%;
 }
 
-/* table of contents (index) of a post */
-nav.toc {
+/* table of contents of a post (from [TOC] in markdown) */
+.toc {
   border-left: 3px solid #ddd;
   padding-left: 1em;
   margin: 1.5em 0;
 }
 
-nav.toc p {
-  margin: 0;
+.toctitle {
   font-weight: bold;
   color: #333;
 }
 
-nav.toc ul {
+.toc ul {
   margin: 0;
   padding-left: 1.2em;
 }

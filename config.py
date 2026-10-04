@@ -22,9 +22,9 @@ res_dir = "resources"
 # adds in head the et_font
 use_et_font = False
 
-# Markdown settings: the `toc` extension adds an `id` to every heading,
-# which the `ext/toc.py` extension uses to build a table of contents.
-markdown_settings = {"extensions": ["toc"]}
-
-# Title of the table of contents shown in posts with `toc: true`.
-toc_title = "Contents"
+# Markdown settings: the `toc` extension adds an `id` to every heading
+# and replaces a `[TOC]` line in a post with its table of contents.
+markdown_settings = {
+    "extensions": ["toc"],
+    "extension_configs": {"toc": {"title": "Contents"}},
+}
