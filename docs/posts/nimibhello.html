@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hello nimib</title>
+        <link rel="stylesheet" href="../assets/ihwd.css">
+        
+        
+        <script defer data-domain="pietroppeter.github.io/blog" src="https://plausible.io/js/script.js"></script>
+    </head>
+    <body class="node-posts-nimibhello node-posts node">
+        <nav>
+            <ul>
+                <li><a href="../index.html">posts</a></li>
+                <li><a href="../about.html">about</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h2>Hello nimib</h2>
+        <h3>2026-10-04</h3>
+        <!-- generated with nimib from nbsrc/nimibhello.nim, do not edit -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/pietroppeter/nimib/assets/atom-one-light.css'>
+<style>
+.nb-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nb-small {
+  font-size: 0.8rem;
+}
+button.nb-small {
+  float: right;
+  padding: 2px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+section#source {
+  display:none
+}
+pre > code {
+  font-size: 1.2em;
+}
+.nb-output {
+  line-height: 1.15;
+}
+figure {
+  margin: 2rem 0;
+}
+figcaption {
+  text-align: center;
+}
+  
+</style>
+<div class="nimib">
+<p>This post is not written in markdown: it is a Nim file that uses
+<a href="https://github.com/pietroppeter/nimib">nimib</a> 🐳.
+Text blocks are markdown, code blocks are Nim code that gets executed
+when the post is built, and its output is captured below the code.</p>
+<pre><code class="nohighlight nim hljs"><span class="hljs-keyword">proc</span> fib(n: <span class="hljs-built_in">int</span>): <span class="hljs-built_in">int</span> =
+  <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">2</span>: n
+  <span class="hljs-keyword">else</span>: fib(n - <span class="hljs-number">1</span>) + fib(n - <span class="hljs-number">2</span>)
+
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;first fibonacci numbers: &quot;</span>, (<span class="hljs-number">0</span> .. <span class="hljs-number">15</span>).mapIt(fib(it)).join(<span class="hljs-string">&quot;, &quot;</span>)</code></pre>
+<pre class="nb-output">first fibonacci numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610
+</pre>
+<p>Since it is a recursive blog, here is a recursive drawing (a Sierpinski triangle in ascii):</p>
+<pre><code class="nohighlight nim hljs"><span class="hljs-keyword">proc</span> sierpinski(n: <span class="hljs-built_in">int</span>): <span class="hljs-built_in">seq</span>[<span class="hljs-built_in">string</span>] =
+  <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span>:
+    <span class="hljs-keyword">return</span> @[<span class="hljs-string">&quot;*&quot;</span>]
+  <span class="hljs-keyword">let</span> prev = sierpinski(n - <span class="hljs-number">1</span>)
+  <span class="hljs-keyword">let</span> pad = repeat(' <span class="hljs-string">', 1 shl (n - 1))</span>
+  <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> prev:
+    <span class="hljs-literal">result</span>.add pad &amp; line &amp; pad
+  <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> prev:
+    <span class="hljs-literal">result</span>.add line &amp; <span class="hljs-string">&quot; &quot;</span> &amp; line
+
+<span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> sierpinski(<span class="hljs-number">4</span>):
+  <span class="hljs-keyword">echo</span> line</code></pre>
+<pre class="nb-output">               *               
+              * *              
+             *   *             
+            * * * *            
+           *       *           
+          * *     * *          
+         *   *   *   *         
+        * * * * * * * *        
+       *               *       
+      * *             * *      
+     *   *           *   *     
+    * * * *         * * * *    
+   *       *       *       *   
+  * *     * *     * *     * *  
+ *   *   *   *   *   *   *   * 
+* * * * * * * * * * * * * * * *
+</pre>
+<p>Variables computed in Nim can also end up in the text:
+the 30th fibonacci number is <strong>832040</strong>.</p>
+<p>Click on <em>Show Source</em> below to see the Nim source of this post.</p>
+<div class="nb-source"><button class="nb-small" id="show" onclick="toggleSourceDisplay()">Show Source</button></div>
+<section id="source">
+<pre><code class="nohighlight nim hljs"><span class="hljs-keyword">import</span> std / [strformat, strutils, sequtils]
+<span class="hljs-keyword">import</span> nimib, blognb
+
+nbInit(theme = useBlog)
+nb.title = <span class="hljs-string">&quot;Hello nimib&quot;</span>
+nb.date = <span class="hljs-string">&quot;2026-10-04&quot;</span>
+
+nbText: <span class="hljs-string">&quot;&quot;&quot;
+This post is not written in markdown: it is a Nim file that uses
+[nimib](https://github.com/pietroppeter/nimib) 🐳.
+Text blocks are markdown, code blocks are Nim code that gets executed
+when the post is built, and its output is captured below the code.
+&quot;&quot;&quot;</span>
+
+nbCode:
+  <span class="hljs-keyword">proc</span> fib(n: <span class="hljs-built_in">int</span>): <span class="hljs-built_in">int</span> =
+    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">2</span>: n
+    <span class="hljs-keyword">else</span>: fib(n - <span class="hljs-number">1</span>) + fib(n - <span class="hljs-number">2</span>)
+
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;first fibonacci numbers: &quot;</span>, (<span class="hljs-number">0</span> .. <span class="hljs-number">15</span>).mapIt(fib(it)).join(<span class="hljs-string">&quot;, &quot;</span>)
+
+nbText: <span class="hljs-string">&quot;&quot;&quot;
+Since it is a recursive blog, here is a recursive drawing (a Sierpinski triangle in ascii):
+&quot;&quot;&quot;</span>
+
+nbCode:
+  <span class="hljs-keyword">proc</span> sierpinski(n: <span class="hljs-built_in">int</span>): <span class="hljs-built_in">seq</span>[<span class="hljs-built_in">string</span>] =
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span>:
+      <span class="hljs-keyword">return</span> @[<span class="hljs-string">&quot;*&quot;</span>]
+    <span class="hljs-keyword">let</span> prev = sierpinski(n - <span class="hljs-number">1</span>)
+    <span class="hljs-keyword">let</span> pad = repeat(' <span class="hljs-string">', 1 shl (n - 1))</span>
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> prev:
+      <span class="hljs-literal">result</span>.add pad &amp; line &amp; pad
+    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> prev:
+      <span class="hljs-literal">result</span>.add line &amp; <span class="hljs-string">&quot; &quot;</span> &amp; line
+
+  <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> sierpinski(<span class="hljs-number">4</span>):
+    <span class="hljs-keyword">echo</span> line
+
+<span class="hljs-keyword">let</span> n = <span class="hljs-number">30</span>
+nbText: &amp;<span class="hljs-string">&quot;&quot;&quot;
+Variables computed in Nim can also end up in the text:
+the {n}th fibonacci number is **{fib(n)}**.
+
+Click on *Show Source* below to see the Nim source of this post.
+&quot;&quot;&quot;</span>
+
+nbSave
+</code></pre>
+</section>
+  
+<script>
+  function toggleSourceDisplay() {
+    var btn = document.getElementById("show")
+    var source = document.getElementById("source");
+    if (btn.innerHTML=="Show Source") {
+      btn.innerHTML = "Hide Source";
+      source.style.display = "block";
+    } else {
+      btn.innerHTML = "Show Source";
+      source.style.display = "none";
+    }
+  }
+</script>
+  
+</div>
+        
+    </body>
+</html>
