@@ -44,6 +44,8 @@ func nbDocToBlogHtml*(blk: NbBlock, nb: Nb): string =
     "<!-- generated with nimib from nbsrc/" & nb.doc.context{"source_file"}.getStr & ", do not edit -->"
     atomOneLight
     nbStyle
+    # show source button above the source code (not floating), so the code gets the full width
+    "<style>.nb-source { text-align: right; } .nb-source button.nb-small { float: none; }</style>"
     """<div class="nimib">"""
     nbContainerToHtml(blk, nb)
     """<div class="nb-source">""" & showSourceButtonToHtml(docJson, nb) & "</div>"
