@@ -13,6 +13,9 @@ built with [ark]
 uv run ark build
 ```
 
+The site (`docs/`) is not committed: CI builds it and deploys it to GitHub Pages
+on every push to `main` (pull requests only build it).
+
 ## drafts
 
 A post with `draft: true` in its front matter (`nb.draft = true` for nimib posts)
