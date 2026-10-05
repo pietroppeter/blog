@@ -23,4 +23,4 @@ res_dir = "resources"
 use_et_font = False
 
 # Absolute url of the site, used for the RSS feed (feed.xml).
-url = "https://pietroppeter.github.io/blog/"
+url = "https://pietroppeter.xyz/blog/"
