@@ -21,3 +21,6 @@ res_dir = "resources"
 
 # adds in head the et_font
 use_et_font = False
+
+# Absolute url of the site, used for the RSS feed (feed.xml).
+url = "https://pietroppeter.github.io/blog/"

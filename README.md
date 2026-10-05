@@ -1,7 +1,8 @@
 # blog
 
 A personal blog: https://pietroppeter.github.io/blog/
-(drafts: https://pietroppeter.github.io/blog/drafts.html)
+(drafts: https://pietroppeter.github.io/blog/drafts.html,
+RSS feed: https://pietroppeter.github.io/blog/feed.xml)
 
 built with [ark]
 
