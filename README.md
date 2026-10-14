@@ -1,8 +1,8 @@
 # blog
 
-A personal blog: https://pietroppeter.xyz/blog/
-(drafts: https://pietroppeter.xyz/blog/drafts.html,
-RSS feed: https://pietroppeter.xyz/blog/feed.xml)
+A personal blog: https://blog.pietroppeter.xyz/
+(drafts: https://blog.pietroppeter.xyz/drafts.html,
+RSS feed: https://blog.pietroppeter.xyz/feed.xml)
 
 built with [ark]
 
@@ -22,7 +22,7 @@ on every push to `main` (pull requests only build it).
 A post with `draft: true` in its front matter (`nb.draft = true` for nimib posts)
 is built but not listed in the index: it is listed in [drafts.html] instead.
 
-[drafts.html]: https://pietroppeter.xyz/blog/drafts.html
+[drafts.html]: https://blog.pietroppeter.xyz/drafts.html
 
 ## posts with nimib
 
